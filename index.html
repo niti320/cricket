@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="script.js"></script>  -->
+</head>
+
+<body>
+
+    <!-- give each elements in uppbox specific heights accodring to percent -->
+
+
+    <section class="openingscreen">
+        <form action="#"></form>
+        SLECT TEAM
+        <br>
+        <br>
+        <div class="radio">
+        <input type="radio" id="team1" name="team" value="Chapri Super Challengers">
+        <label for="team1">Chapri Super Challengers</label>
+        <input type="radio" id="team2" name="team" value="BKL Kings">
+        <label for="team2">BKL Kings</label>
+        <input type="radio" id="team3" name="team" value="Unemployed Riders">
+        <label for="team3">Unemployed Riders</label><br>
+
+    </div>
+
+        <input type="text" placeholder="ENTER YOUR NAME" id="introname">
+        <button onclick="playgame()" id="playbut" class="buto">PLAY</button>
+        <div class="info">RULES:
+            <br>
+            <span>1. You only have 2 wickets.
+                <br>
+                2. Select your runs.
+                <br>
+                3. AI will select a random number
+                <br>
+                4. If AI choses same number as
+                <br>
+                you, you will be OUT.
+                <br>
+                5. 4 and 6 are more risky to OUT.
+                <br>
+            </span>
+        </div>
+
+    </section>
+
+    <section class="game">
+        <div class="upperbox">
+            <span class="trycount">TRY - <span class="trycount" id="tryval">1</span> </span>
+
+            <div class="animbox">
+                <img src="anim.gif" alt="ERror loaDING Image" id="dice">
+            </div>
+
+            <div class="output">
+                AI CHOSES:
+                <span id="runs">0</span>
+
+
+            </div>
+            <div class="choice">
+                YOUR CHOICE :
+                <span id="yourchoicee">0</span>
+                <br>
+            </div>
+            <span id="yourresult">SELECT RUNS</span>
+
+
+            <div class="bttnbox">
+                <button id="1x" class="bttns">1</button>
+                <button id="2x" class="bttns">2</button>
+                <button id="3x" class="bttns">3</button>
+                <button id="4x" class="bttns">4</button>
+                <button id="6x" class="bttns">6</button>
+                <button id="0x" class="bttns">0</button>
+                <!-- <button class="submit" onclick="setRandomValue()">PLAY</button> -->
+            </div>
+
+
+        </div>
+        <div class="lowerbox">
+            <div class="minibox">
+
+                <div class="scorebox1">
+                    <div id="score" class="scorecard">
+
+                        <span class="sruns">0</span>
+                        /
+                        <span class="swickets">0</span>
+
+                    </div>
+                    <div id="playername" class="scorecard">Sample</div>
+
+                </div>
+
+                <div class="scorebox2">
+
+                    <div id="overs" class="scorecard">
+
+                        <span class="overnumber">0</span>
+                        .
+                        <span class="ballnumber">0</span>
+
+
+                    </div>
+
+                    <div id="required" class="scorecard">
+                    </div>
+
+                </div>
+                <!-- <div class="status">STATUS: 
+                    <span id="currentstatus">BEVKOOF</span>
+                </div> -->
+            </div>
+        </div>
+    </section>
+    <section class="endscreen">
+        <button id="retry" class="buto" onclick="retry()">RETRY</button>
+        <h1>THE END</h1>
+        <span>YOUR SCORE : </span> <br>
+        <span class="finalscore"></span>
+        OVERS
+        <span class="finalovers"></span>
+
+
+
+    </section>
+</body>
+
+
+<script src="script.js"></script>
+
+</html>
